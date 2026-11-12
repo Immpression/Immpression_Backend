@@ -10,8 +10,8 @@ const slugify = (str = "") =>
 const BASE_URL = "https://www.immpression.art";
 
 const STATIC_PAGES = [
-  { loc: `${BASE_URL}/`, changefreq: "weekly", priority: "1.0" },
-  { loc: `${BASE_URL}/marketplace`, changefreq: "daily", priority: "0.9" },
+  { loc: `${BASE_URL}/`, changefreq: "daily", priority: "1.0" }, // the marketplace
+  { loc: `${BASE_URL}/flashback`, changefreq: "monthly", priority: "0.4" }, // previous home page
   { loc: `${BASE_URL}/about`, changefreq: "monthly", priority: "0.7" },
   { loc: `${BASE_URL}/contact`, changefreq: "monthly", priority: "0.6" },
   { loc: `${BASE_URL}/explore`, changefreq: "weekly", priority: "0.7" },
