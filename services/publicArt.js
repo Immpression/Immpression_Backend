@@ -237,6 +237,10 @@ function normalizeWikimedia(page) {
     description: cleanArtworkText(meta.ImageDescription?.value) || null,
     department: null,
     creditLine: cleanArtworkText(meta.Credit?.value) || null,
+    // Commons also hosts Creative Commons works, so pass the file's license
+    // through (e.g. "Public domain", "CC0", "CC BY-SA 2.0") for the client
+    // to show accurately. Museum sources are public domain by query filter.
+    license: cleanArtworkText(meta.LicenseShortName?.value) || null,
     sourceUrl: `https://commons.wikimedia.org/wiki/${encodeURIComponent(page.title || "")}`,
   };
 }
