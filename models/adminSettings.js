@@ -25,6 +25,9 @@ const adminSettingsSchema = new mongoose.Schema(
           marketplaceRailTop: {
             enabled: { type: Boolean, default: false },
           },
+          marketplaceNative: {
+            enabled: { type: Boolean, default: false },
+          },
         },
       },
       hilltop: {
